@@ -4,54 +4,53 @@
 using namespace std;
 
 double inchesToCentimeters(double inches) {
-    // TODO: return inches converted to centimeters.
-    return 0.0;
+    // return inches converted to centimeters.
+    return inches * 2.54;
 }
 
 double centimetersToInches(double centimeters) {
-    // TODO: return centimeters converted to inches.
-    return 0.0;
+    // return centimeters converted to inches.
+    return centimeters / 2.54;
 }
 
 double poundsToKilograms(double pounds) {
-    // TODO: return pounds converted to kilograms.
-    return 0.0;
+    // return pounds converted to kilograms.
+    return pounds / 2.20462;
 }
 
 double kilogramsToPounds(double kilograms) {
-    // TODO: return kilograms converted to pounds.
-    return 0.0;
+    // return kilograms converted to pounds.
+    return kilograms * 2.20462;
 }
 
 double fahrenheitToCelsius(double fahrenheit) {
-    // TODO: return Fahrenheit converted to Celsius.
-    return 0.0;
+    // return Fahrenheit converted to Celsius.
+    return (fahrenheit-32.0)*(5.0/9.0);
 }
 
 double celsiusToFahrenheit(double celsius) {
-    // TODO: return Celsius converted to Fahrenheit.
-    return 0.0;
+    // return Celsius converted to Fahrenheit.
+    return (celsius * (9.0/5.0)) + 32.0;
 }
 
 bool isValidMenuChoice(int choice) {
-    // TODO: return true when choice is between EXIT_CHOICE and CELSIUS_TO_FAHRENHEIT.
-    return false;
+    // return true when choice is between EXIT_CHOICE and CELSIUS_TO_FAHRENHEIT.
+    return 0 <= choice && choice <= 6;
 }
 
 bool requiresNonNegativeValue(int choice) {
     // Length and weight conversions cannot use negative values.
     // Temperature conversions may use negative values.
-    // TODO: return true for choices 1 through 4.
-    return false;
+    // return true for choices 1 through 4.
+    return 1 <= choice && choice <= 4;
 }
 
 bool isValidValueForChoice(int choice, double value) {
-    // TODO:
     // 1. Invalid menu choices should return false.
     // 2. Length and weight conversions should reject negative values.
     // 3. Temperature conversions should allow negative values.
-    return false;
-}
+    return (0 <= choice && choice <= 6) && (((1 <= choice && choice <= 4) && value >= 0) || (5 <= choice && choice <= 6));
+}   // Already familiar with if statements, wanted more practice with && and ||
 
 void printMenu() {
     cout << endl;
