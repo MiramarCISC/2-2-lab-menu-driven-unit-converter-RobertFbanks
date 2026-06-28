@@ -5,22 +5,22 @@ using namespace std;
 
 double inchesToCentimeters(double inches) {
     // return inches converted to centimeters.
-    return inches * 2.54;
+    return inches * CENTIMETERS_PER_INCH;
 }
 
 double centimetersToInches(double centimeters) {
     // return centimeters converted to inches.
-    return centimeters / 2.54;
+    return centimeters / CENTIMETERS_PER_INCH;
 }
 
 double poundsToKilograms(double pounds) {
     // return pounds converted to kilograms.
-    return pounds / 2.20462;
+    return pounds / POUNDS_PER_KILOGRAM;
 }
 
 double kilogramsToPounds(double kilograms) {
     // return kilograms converted to pounds.
-    return kilograms * 2.20462;
+    return kilograms * POUNDS_PER_KILOGRAM;
 }
 
 double fahrenheitToCelsius(double fahrenheit) {
