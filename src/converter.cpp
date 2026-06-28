@@ -25,12 +25,12 @@ double kilogramsToPounds(double kilograms) {
 
 double fahrenheitToCelsius(double fahrenheit) {
     // return Fahrenheit converted to Celsius.
-    return (fahrenheit-32.0)*(5.0/9.0);
+    return (fahrenheit - 32.0) * (5.0 / 9.0);
 }
 
 double celsiusToFahrenheit(double celsius) {
     // return Celsius converted to Fahrenheit.
-    return (celsius * (9.0/5.0)) + 32.0;
+    return (celsius * (9.0 / 5.0)) + 32.0;
 }
 
 bool isValidMenuChoice(int choice) {
