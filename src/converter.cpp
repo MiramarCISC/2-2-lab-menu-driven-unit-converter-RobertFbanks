@@ -49,7 +49,7 @@ bool isValidValueForChoice(int choice, double value) {
     // 1. Invalid menu choices should return false.
     // 2. Length and weight conversions should reject negative values.
     // 3. Temperature conversions should allow negative values.
-    return (0 <= choice && choice <= 6) && (((1 <= choice && choice <= 4) && value >= 0) || (5 <= choice && choice <= 6));
+    return isValidMenuChoice(choice) && ((requiresNonNegativeValue(choice) && value >= 0) || !requiresNonNegativeValue(choice)); // asloam: it's a bit cleaner and easier to read if you use the functions you made previously
 }   // Already familiar with if statements, wanted more practice with && and ||
 
 void printMenu() {
